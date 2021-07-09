@@ -1,0 +1,61 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Overpass');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Bootstrap icon
+@import '~bootstrap-icons/font/bootstrap-icons';
+
+body {
+    padding-top: 7rem;
+}
+
+.btn-air {
+    color: #fff;
+    background-color: #dc0f62;
+}
+
+.btn-air:hover {
+    color: #fff;
+    background-color: #e51d4d;
+}
+
+.text-main {
+    color: #222222;
+}
+
+.text-air {
+    color: #FF5A5F;
+}
+
+a, a:hover{
+    color: #222222;
+}
+
+footer {
+ bottom: 0;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+}
+
+.nav .nav-link {
+  color: #717171;
+}
+
+.nav .nav-link.active {
+  color: #222222;
+  border-bottom: 3px solid #222222;
+}
+
+.nav .nav-link:hover {
+    color: #222222;
+    background-color: #ebebeb;
+}
+
