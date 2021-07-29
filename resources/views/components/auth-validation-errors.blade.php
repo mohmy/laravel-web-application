@@ -6,7 +6,7 @@
             {{ __('Whoops! Something went wrong.') }}
         </div>
 
-        <div class="text-muted">
+        <div class="">
             @foreach ($errors->all() as $error)
                 {{ $error }}
             @endforeach

@@ -3,25 +3,29 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <x-auth-card>
+
+                    <x-slot name="header">
+                        Log Masuk
+                    </x-slot>
+
                     <!-- Session Status -->
                     <x-auth-session-status class="alert alert-danger mb-4" :status="session('status')" />
 
                     <!-- Validation Errors -->
-                    <x-auth-validation-errors class="p-3 border rounded mb-4" :errors="$errors" />
+                    <x-auth-validation-errors class="alert alert-danger mb-4" :errors="$errors" />
 
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('login') }}" class="form-floating">
                         @csrf
-
                         <!-- Email Address -->
-                        <div class="">
-                            <x-input id="email" class="" type="email" name="email" :value="old('email')" placeholder="Email" required
-                                autofocus />
+                        <div class="form-floating">
+                            <x-input id="email" class="" type="email" name="email" :value="old('email')" placeholder="Email" required />
+                            <x-label for="email" :value="__('Email')" />
                         </div>
 
                         <!-- Password -->
-                        <div class="mt-4">
-                            <x-input id="password" class="" type="password" name="password" placeholder="Password" required
-                                autocomplete="current-password" />
+                        <div class="form-floating mt-4">
+                            <x-input id="password" class="" type="password" name="password" placeholder="Password" required autocomplete="current-password" />
+                                <x-label for="email" :value="__('Password')" />
                         </div>
 
                         <div class="d-grid gap-2 mt-4">
