@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Models\User;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,5 +27,3 @@ Route::get('/dashboard', function () {
 Route::get('/{user}', function (User $user) {
     return $user->name.' - '.$user->slug;
 })->name('profile');
-
-

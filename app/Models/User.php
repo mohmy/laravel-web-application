@@ -2,11 +2,12 @@
 
 namespace App\Models;
 
+use App\Traits\Uuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
-use App\Traits\Uuids;
+
 class User extends Authenticatable
 {
     use HasFactory, Notifiable, Uuids;
@@ -57,7 +58,8 @@ class User extends Authenticatable
         return $url;
     }
 
-    public function getSlugAttribute(){
-	    return Str::slug($this->name, '-');
-	}
+    public function getSlugAttribute()
+    {
+        return Str::slug($this->name, '-');
+    }
 }
