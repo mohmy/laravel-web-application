@@ -25,7 +25,7 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="{{ route('profile', Auth::user()->id) }}">Profil</a></li>
-                        <li><a class="dropdown-item" href="#">Tetapan</a></li>
+                        <li><a class="dropdown-item" href="{{ route('account.setting') }}">Akaun</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>

@@ -32,8 +32,12 @@ body {
     color: #FF5A5F;
 }
 
-a, a:hover{
-    color: #222222;
+a:link {
+    text-decoration: none;
+}
+
+.air-link:hover{
+    text-decoration: underline;
 }
 
 footer {
@@ -58,4 +62,9 @@ footer {
     color: #222222;
     background-color: #ebebeb;
 }
+
+.card-link:hover {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
+
 

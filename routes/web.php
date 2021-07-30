@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Models\User;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AccountController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,8 +25,14 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::middleware(['auth'])->prefix('tetapan-akaun')->group(function () {
+    Route::get('/', function () {
+        return view('account.setting');
+    })->name('account.setting');
+    Route::get('butiran-peribadi', [AccountController::class, 'index'])->name('account.personal');
+});
+
+
 Route::get('/{user}', function (User $user) {
-    return $user->name.' - '.$user->slug;
+    return view('account.profile', compact('user'));
 })->name('profile');
-
-
