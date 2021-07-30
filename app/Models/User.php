@@ -10,7 +10,9 @@ use Illuminate\Support\Str;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable, Uuids;
+    use HasFactory;
+    use Notifiable;
+    use Uuids;
 
     /**
      * The attributes that are mass assignable.
